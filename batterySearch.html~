@@ -1,0 +1,22 @@
+
+
+	<head>
+		<title>Battery details</title>
+	</head>
+
+	<body>
+	<b>
+		Battery List and its specifications...
+	</b><br>
+	<hr>
+		<table>
+			<th>AA+ Battery <a href="http://datasheet.octopart.com/5030852-Ansmann-datasheet-5400527.pdf" >datahseet</a> <br>
+				<a href="http://data.energizer.com/PDFs/nh15-2300.pdf" >Datasheet 2</a>			
+			</th>
+			<tr>
+				<td></td>
+			</tr>		
+		</table>
+	</body>
+
+</html>
