@@ -1,0 +1,37 @@
+<html>
+	<head>
+	<title>Switching between power : Arduino</title>
+</head>
+<body>
+	<h1>Switching between Wall power and Battery </h1>
+	<br>
+	<hr>
+	<p>
+	
+	Power switching circuit is shown in figure...<br><br>
+	<p style="float: left; border: 3px groove black;">
+	<img src="./images/switching.jpg" alt="switching circuit snap" width="600" height="350" ><br>
+	</p>
+	<p align="justify">
+		About this circuit...
+		<br>
+		<br>
+		#One source is coming from Wall adapter.<br>
+		#Second power source is battery.<br>
+		So case here is we want battery as backup!!!<br><br>
+		So basically we have used Diode OR logic to switch the power supply when the wall power source is cut off.<br><br>
+		when wall power source is ON at that time voltage of battery is lower than that of wall power source(condition self acquire). So D1 will protect / cutoff battery to come into circuit and D2 will not allow the current to run into battery but allow to run towards system via Output line as show in pic. <br>
+		<br>
+		Now if wall power cutt off then at that point battery voltage will be the only source and immediately battery will power the system and D1 will be a blocker and thus current will flow to output line.<br><br>
+		
+		So this way we can switch power supply between wall power source and battery.
+		<br><br>
+		<b>Note*:</b>voltage of wall power will be less than voltage of battery! otherwise battery will the primary source . 
+			
+	</p>
+	<br/>
+	
+	
+	</p>
+</body>
+</html>
