@@ -1,0 +1,175 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
+	<TITLE>Sketch : Annim Banerjee</TITLE>
+	<meta name="generator" content="Bluefish 2.2.4" >
+	<META NAME="CREATED" CONTENT="0;0">
+	<META NAME="CHANGEDBY" CONTENT="Annim Banerjee">
+	<META NAME="CHANGED" CONTENT="20131126;16034800">
+</HEAD>
+<BODY LANG="en-IN" DIR="LTR">
+<H1>Sketch 
+</H1>
+<HR>
+<P STYLE="margin-bottom: 0cm"><IMG SRC="images/sketch.jpg" NAME="graphics1" ALIGN=LEFT WIDTH=650 HEIGHT=350 BORDER=0>Pin
+assignment and pin not connected list with respect to image shown... 
+</P>
+<TABLE CELLPADDING=4 CELLSPACING=0>
+	<TR>
+		<TD STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P>Arduino pin number</P>
+		</TD>
+		<TD STYLE="border: 1px solid #000000; padding: 0.1cm">
+			<P>Pin interfaced to 
+			</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P>D0 (RX) 
+			</P>
+		</TD>
+		<TD STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P>NC ( not connected ) 
+			</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P>D1 (TX) 
+			</P>
+		</TD>
+		<TD STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P>NC ( not connected ) 
+			</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P>D2 
+			</P>
+		</TD>
+		<TD STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P>Connected to Rain Gauge with a pull down resistor. 
+			</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P>D3, D4, D5 
+			</P>
+		</TD>
+		<TD STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P>NC ( not connected ) 
+			</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P>D6 
+			</P>
+		</TD>
+		<TD STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P>DHT22/DHT11 Sensor. 
+			</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P>D7 
+			</P>
+		</TD>
+		<TD STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P>LCD pin 4 
+			</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P>D8 
+			</P>
+		</TD>
+		<TD STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P>LCD pin 6 
+			</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P>D9 
+			</P>
+		</TD>
+		<TD STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P>LCD pin 11 
+			</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P>D10 
+			</P>
+		</TD>
+		<TD STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P>LCD pin 12 
+			</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P>D11 
+			</P>
+		</TD>
+		<TD STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P>LCD pin 13 
+			</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P>D12 
+			</P>
+		</TD>
+		<TD STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P>LCD pin 14 
+			</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P>I2C protocol based Devices 
+			</P>
+		</TD>
+		<TD STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P>BMP085, RTC always on A5(SCL), A4(SDA). 
+			</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P>D13 
+			</P>
+		</TD>
+		<TD STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P>NC ( not connected ) 
+			</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P>SPI protocol based devices 
+			</P>
+		</TD>
+		<TD STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P>if any - like SD card always on SPI pins .i.e. D13(SCK), MISO(
+			D12), MOSI (D11). 
+			</P>
+		</TD>
+	</TR>
+</TABLE>
+<P><BR><BR>
+</P>
+<p>pin connection is been described here... with this we can add GSM , other SPI and I2C based devices... also some more Digital based connections if required.
+<br><br></p>
+</BODY>
+</HTML>
