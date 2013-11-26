@@ -1,0 +1,1036 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
+	<TITLE>Battery details</TITLE>
+	<META NAME="GENERATOR" CONTENT="LibreOffice 4.0.2.2 (Linux)">
+	<META NAME="CREATED" CONTENT="0;0">
+	<META NAME="CHANGEDBY" CONTENT="Annim Banerjee">
+	<META NAME="CHANGED" CONTENT="20131126;13163700">
+	<META NAME="CHANGEDBY" CONTENT="Annim Banerjee">
+	<META NAME="CHANGEDBY" CONTENT="Annim Banerjee">
+	<META NAME="CHANGEDBY" CONTENT="Annim Banerjee">
+</HEAD>
+<BODY LANG="en-IN" DIR="LTR">
+<P ALIGN=CENTER STYLE="margin-bottom: 0cm"><B>Battery List and its
+specifications... </B>
+</P>
+<HR>
+<P>Inspired by <A HREF="http://playground.arduino.cc/Main/IntWithHW-PwrSup">Arduino
+Playground</A>.</P>
+<P>Also see from <A HREF="http://www.instructables.com/id/Powering-Arduino-with-a-Battery/">here</A>
+for powering arduino from battery.</P>
+<P>Also see from <A HREF="http://www.vetco.net/blog/?p=113">here</A>,
+using Dc to DC(encouraged here) booster on AAA battery and powering
+arduino. This link also shows that you can plug 12v lead acid battery
+to power arduino for long run. Thats ovious that we have to arrange
+power regulation circut to drop down to 5 volts if we are making our
+own Bare bone board( BBB ) else, on board regulator can regulate the
+lead acid battery supply to 5 volts, hences arduino can take easily
+upto 7v-12v supply as the Ldo is taking care of the same along with
+the polarized capacitor on board.</P>
+<CENTER>
+	<TABLE WIDTH=563 CELLPADDING=0 CELLSPACING=0>
+		<COL WIDTH=178>
+		<COL WIDTH=178>
+		<COL WIDTH=207>
+		<TR>
+			<TH COLSPAN=2 WIDTH=356 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">AA+ Battery
+				<A HREF="http://datasheet.octopart.com/5030852-Ansmann-datasheet-5400527.pdf">datahseet</A>
+				<BR><A HREF="http://data.energizer.com/PDFs/nh15-2300.pdf">Datasheet
+				2</A> </FONT>
+				</P>
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">ENERGIZER
+				NH15-2300(generic)</FONT></P>
+			</TH>
+			<TH WIDTH=207 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><BR>
+				</P>
+			</TH>
+		</TR>
+		<TR>
+			<TD COLSPAN=2 WIDTH=356 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">Specifications</FONT></P>
+			</TD>
+			<TD WIDTH=207 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">remarks</FONT></P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH=178 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">Classification</FONT></P>
+			</TD>
+			<TD WIDTH=178 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">Rechargable</FONT></P>
+			</TD>
+			<TD WIDTH=207 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><BR>
+				</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH=178 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">Chemical
+				System</FONT></P>
+			</TD>
+			<TD WIDTH=178 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">Nical –
+				Metal Hydride</FONT></P>
+			</TD>
+			<TD WIDTH=207 STYLE="border: none; padding: 0cm">
+				<UL>
+					<LI><P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">Nickel/
+					Metal Hydride, or &quot;NiMH&quot; </FONT>
+					</P>
+				</UL>
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">You can buy
+				NiMH technology &quot;batteries&quot; (cells, actually) in the
+				conventional form factors, e.g. &quot;AA&quot;. The little
+				&quot;gotcha&quot; that you need to know about is that these
+				cells actually run at about 1.2v after only a brief burst of
+				nearly 1.5v, which you only get if the load is light... and 4 x
+				1.2v is low enough to start making your Arduino unreliable. It
+				</FONT><EM><FONT SIZE=1 STYLE="font-size: 8pt">really</FONT></EM>
+				<FONT SIZE=1 STYLE="font-size: 8pt">needs something </FONT><EM><FONT SIZE=1 STYLE="font-size: 8pt">closer</FONT></EM>
+				<FONT SIZE=1 STYLE="font-size: 8pt">to 5.0v. </FONT>
+				</P>
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">But all is
+				not lost! You can put 6 or 8 &quot;1.5v&quot; cells in series,
+				and feed the resulting voltage to a voltage regulator between the
+				battery and your Arduino... Many Arduinos </FONT><EM><FONT SIZE=1 STYLE="font-size: 8pt">expect</FONT></EM>
+				<FONT SIZE=1 STYLE="font-size: 8pt">you to give them something
+				more than 5v to be regulated down to the 5v needed &quot;inside&quot;
+				the Arduino. The downside of this &quot;solution&quot; is that is
+				wastes some of the charge stored in the cells during the process
+				of regulation. </FONT>
+				</P>
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">PS: we need
+				compatible charger to recharge it.</FONT></P>
+				<P ALIGN=CENTER><BR>
+				</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH=178 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">Nominal
+				Voltage</FONT></P>
+			</TD>
+			<TD WIDTH=178 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">1.2 volts</FONT></P>
+			</TD>
+			<TD WIDTH=207 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">If we place 6
+				pcs in series then with same current capacity we will get 6 x
+				1.2v = 7.2v.</FONT></P>
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">This will
+				power arduino but by the time if voltage drops below 6v, arduino
+				will be not working.</FONT></P>
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">As on board
+				volt. Reg. Is placed which has requirements as input voltage &gt;
+				output voltage.</FONT></P>
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">.i.e volt.
+				Reg. 7085 <A HREF="https://www.sparkfun.com/datasheets/Components/LM7805.pdf">datasheet</A>
+				or LDO <A HREF="http://www.ti.com/lit/ds/symlink/lp2954.pdf">datasheet</A>
+				says that output voltage(adjustable) is so arranged that it gives
+				5v regulated. So input voltage should not be below 5V.</FONT></P>
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">So AA+
+				battery can power arduino but not for long time.</FONT></P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH=178 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">Rated
+				capacity </FONT>
+				</P>
+			</TD>
+			<TD WIDTH=178 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">2300mAh at
+				21C ( 70F) * based on 460 mA (0.2C rate) continuous discharge to
+				1.0 volts</FONT></P>
+			</TD>
+			<TD WIDTH=207 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">Load : if the
+				target load is greater than the rated load/ voltage then it
+				cannot power up the target load.</FONT></P>
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">.i.e if
+				arduino need 12 v and battery power is 1.5 volts then i cannot
+				power it, irrespective of the current capacity.</FONT></P>
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">Firstly, to
+				do the same, place battery in series and make it to 12 v as sum,
+				and then as after we have to increase the current capacity then
+				put more battery in paralle to increase th current capacity.</FONT></P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH=178 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">Internal
+				resistance</FONT></P>
+			</TD>
+			<TD WIDTH=178 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">Cells varied
+				with state of charge</FONT></P>
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">cell charged
+				30 milli ohms, cell 1/2 discharged 40 milli ohms.</FONT></P>
+			</TD>
+			<TD WIDTH=207 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><BR>
+				</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH=178 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">AC impedance
+				no load</FONT></P>
+			</TD>
+			<TD WIDTH=178 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">Frequency
+				1000 Hz, </FONT>
+				</P>
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">impidance(
+				milli ohms)(charged cell) 12</FONT></P>
+			</TD>
+			<TD WIDTH=207 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><BR>
+				</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH=178 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">Discharge
+				characteristics</FONT></P>
+			</TD>
+			<TD WIDTH=178 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><IMG SRC="batterySearch_html_m1c886a3f.jpg" NAME="graphics1" ALIGN=RIGHT WIDTH=195 HEIGHT=189 BORDER=0><BR>
+				</P>
+			</TD>
+			<TD WIDTH=207 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><BR>
+				</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH=178 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">Avalability</FONT></P>
+			</TD>
+			<TD WIDTH=178 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><A HREF="http://www.flipkart.com/sony-nh-aa-b4en-rechargeable-ni-mh-battery/p/itmdyfx2mzgdxv2x"><FONT SIZE=1 STYLE="font-size: 8pt">Here</FONT></A></P>
+			</TD>
+			<TD WIDTH=207 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">800 –
+				1000Rs. flipkart</FONT></P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH=178 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">Sony link</FONT></P>
+			</TD>
+			<TD WIDTH=178 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><A HREF="http://www.sony.co.in/product/nh-aa-b2en"><FONT SIZE=1 STYLE="font-size: 8pt">Here</FONT></A></P>
+			</TD>
+			<TD WIDTH=207 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><BR>
+				</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH=178 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">Applied
+				somewhere</FONT></P>
+			</TD>
+			<TD WIDTH=178 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><A HREF="http://www.instructables.com/id/The-Arduino-AA-Undershield/"><FONT SIZE=1 STYLE="font-size: 8pt">Here</FONT></A></P>
+				<P ALIGN=CENTER><A HREF="http://www.instructables.com/id/Power-your-Arduino-Uno-with-four-rechargeable-AA-b/"><FONT SIZE=1 STYLE="font-size: 8pt">Here</FONT></A></P>
+			</TD>
+			<TD WIDTH=207 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><BR>
+				</P>
+			</TD>
+		</TR>
+	</TABLE>
+</CENTER>
+<P ALIGN=CENTER STYLE="border-top: none; border-bottom: 1.00pt solid #000000; border-left: none; border-right: none; padding-top: 0cm; padding-bottom: 0.07cm; padding-left: 0cm; padding-right: 0cm">
+<BR><BR>
+</P>
+<CENTER>
+	<TABLE WIDTH=563 CELLPADDING=0 CELLSPACING=0>
+		<COL WIDTH=180>
+		<COL WIDTH=180>
+		<COL WIDTH=203>
+		<TR>
+			<TH COLSPAN=2 WIDTH=360 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">Lipo battery
+				(polymer lithium battery)</FONT></P>
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">Datasheet
+				<A HREF="http://ww1.microchip.com/downloads/en/DeviceDoc/Acc-Rn-220XP-Battery-DS.pdf">here</A></FONT></P>
+			</TH>
+			<TH WIDTH=203 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><BR>
+				</P>
+			</TH>
+		</TR>
+		<TR>
+			<TD COLSPAN=2 WIDTH=360 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">Specifications</FONT></P>
+			</TD>
+			<TD WIDTH=203 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">remarks</FONT></P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH=180 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">Type </FONT>
+				</P>
+			</TD>
+			<TD WIDTH=180 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">Polymer
+				lithium ion battery</FONT></P>
+			</TD>
+			<TD WIDTH=203 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><BR>
+				</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH=180 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">Nominal
+				capacity</FONT></P>
+			</TD>
+			<TD WIDTH=180 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">1100mAh</FONT></P>
+			</TD>
+			<TD WIDTH=203 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><BR>
+				</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH=180 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">Charge
+				Current</FONT></P>
+			</TD>
+			<TD WIDTH=180 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">0.2CA</FONT></P>
+			</TD>
+			<TD WIDTH=203 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><BR>
+				</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH=180 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">Nominal
+				Voltage</FONT></P>
+			</TD>
+			<TD WIDTH=180 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">3.7v, avg
+				volt. At 0.2 CA discharge</FONT></P>
+			</TD>
+			<TD WIDTH=203 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">Voltage we
+				are getting from this battery is not sufficient to power Uno
+				board, we have to use DC to DC booster to get 5v and we have to
+				power Uno from USB interface, otherwise UNO needs 7-12 v, if we
+				power UNO from DC jack. This also true with li-ion battery.</FONT></P>
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">Disadvantage
+				of this things is the DC to DC booster will consume current and
+				this will leads to un neccessary / wastage of battery.</FONT></P>
+				<P ALIGN=CENTER><BR>
+				</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH=180 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">Charge
+				cutt-of voltage</FONT></P>
+			</TD>
+			<TD WIDTH=180 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">4.2+-0.03v</FONT></P>
+			</TD>
+			<TD WIDTH=203 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">Other plus
+				point of this power rating that if we want to by pass the voltage
+				regulators then this ratings are good to power up the MCU IC / sd
+				card for 3.3v interfacing/ BMP pressure sensor.</FONT></P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH=180 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">Discharge
+				current</FONT></P>
+			</TD>
+			<TD WIDTH=180 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">0.2CA</FONT></P>
+			</TD>
+			<TD WIDTH=203 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><BR>
+				</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH=180 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">Discharge
+				cuttof voltage</FONT></P>
+			</TD>
+			<TD WIDTH=180 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">2.75v</FONT></P>
+			</TD>
+			<TD WIDTH=203 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><BR>
+				</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH=180 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">Impedance</FONT></P>
+			</TD>
+			<TD WIDTH=180 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">&lt;=130mohms,
+				</FONT>
+				</P>
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">AC 1KHz after
+				50% charge.</FONT></P>
+			</TD>
+			<TD WIDTH=203 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><BR>
+				</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH=180 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">Cell voltage</FONT></P>
+			</TD>
+			<TD WIDTH=180 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">3.8~3.9 v</FONT></P>
+			</TD>
+			<TD WIDTH=203 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><BR>
+				</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH=180 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">Datasheet
+				reffered</FONT></P>
+			</TD>
+			<TD WIDTH=180 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><A HREF="http://ww1.microchip.com/downloads/en/DeviceDoc/Acc-Rn-220XP-Battery-DS.pdf"><FONT SIZE=1 STYLE="font-size: 8pt">Here</FONT></A></P>
+			</TD>
+			<TD WIDTH=203 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><BR>
+				</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH=180 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">Inspred from</FONT></P>
+			</TD>
+			<TD WIDTH=180 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><A HREF="http://playground.arduino.cc/Main/IntWithHW-PwrSup"><FONT SIZE=1 STYLE="font-size: 8pt">Here</FONT></A></P>
+			</TD>
+			<TD WIDTH=203 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><BR>
+				</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH=180 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">Comments</FONT></P>
+			</TD>
+			<TD WIDTH=180 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">High power
+				density, i.e. lots of Amp hours per gram of battery. Expensive
+				compared to other options. Somewhat dangerous if not operated
+				correctly. Use a charger designed for LiPo. Will be damaged by
+				over-charging. Will be damaged by over-discharging. </FONT>
+				</P>
+			</TD>
+			<TD WIDTH=203 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><BR>
+				</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH=180 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">Applied </FONT>
+				</P>
+			</TD>
+			<TD WIDTH=180 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><A HREF="http://www.instructables.com/id/LiPo-Powered-Arduino/"><FONT SIZE=1 STYLE="font-size: 8pt">Here</FONT></A></P>
+			</TD>
+			<TD WIDTH=203 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><BR>
+				</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH=180 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">Availability</FONT></P>
+			</TD>
+			<TD WIDTH=180 STYLE="border: none; padding: 0cm">
+				<P ALIGN=LEFT STYLE="margin-bottom: 0.1cm"><A HREF="http://www.robotshop.com/en/lithium-polymer-battery-2000mah.html"><FONT SIZE=1 STYLE="font-size: 8pt">Here</FONT></A></P>
+				<P ALIGN=LEFT STYLE="margin-bottom: 0.1cm"><FONT SIZE=1 STYLE="font-size: 8pt">Lesser
+				availability in india.</FONT></P>
+				<P ALIGN=LEFT STYLE="margin-bottom: 0.1cm"><FONT SIZE=1 STYLE="font-size: 8pt">16-25
+				$</FONT></P>
+				<P ALIGN=LEFT STYLE="margin-bottom: 0.1cm"><FONT SIZE=1 STYLE="font-size: 8pt">#
+				<A HREF="http://www.hobbypartz.com/83p-2650mah-3s1p-111-25c.html">here</A>
+				&lt;- this with 7.4 v.</FONT></P>
+				<P ALIGN=LEFT STYLE="margin-bottom: 0.1cm"><FONT SIZE=1 STYLE="font-size: 8pt">Net
+				Weight&nbsp; 220</FONT></P>
+				<P ALIGN=LEFT STYLE="margin-bottom: 0.1cm"><FONT SIZE=1 STYLE="font-size: 8pt">Gross
+				Weight&nbsp; 261</FONT></P>
+				<P ALIGN=LEFT STYLE="margin-bottom: 0.1cm"><FONT SIZE=1 STYLE="font-size: 8pt">capacity
+				(mAh) 2650 </FONT>
+				</P>
+				<P ALIGN=LEFT STYLE="margin-bottom: 0.1cm"><FONT SIZE=1 STYLE="font-size: 8pt">max
+				cont. discharge (C) 25 </FONT>
+				</P>
+				<P ALIGN=LEFT STYLE="margin-bottom: 0.1cm"><FONT SIZE=1 STYLE="font-size: 8pt">max
+				burst discharge (C) 50 </FONT>
+				</P>
+				<P ALIGN=LEFT STYLE="margin-bottom: 0.1cm"><FONT SIZE=1 STYLE="font-size: 8pt">max
+				cont current (A)&nbsp; 66.25 </FONT>
+				</P>
+				<P ALIGN=LEFT STYLE="margin-bottom: 0.1cm"><FONT SIZE=1 STYLE="font-size: 8pt">max
+				burst current (A)&nbsp; 132.5 </FONT>
+				</P>
+				<P ALIGN=LEFT STYLE="margin-bottom: 0.1cm"><FONT SIZE=1 STYLE="font-size: 8pt">Series
+				(S)&nbsp; Parallel (P) 3S1P </FONT>
+				</P>
+				<P ALIGN=LEFT STYLE="margin-bottom: 0.1cm"><FONT SIZE=1 STYLE="font-size: 8pt">Length
+				(mm) 133 width (mm) </FONT>
+				</P>
+				<P ALIGN=LEFT STYLE="margin-bottom: 0.1cm"><FONT SIZE=1 STYLE="font-size: 8pt">43
+				Thickness (mm) 15 </FONT>
+				</P>
+				<P ALIGN=LEFT STYLE="margin-bottom: 0.1cm"><FONT SIZE=1 STYLE="font-size: 8pt">wire
+				gauge 12</FONT></P>
+				<P ALIGN=LEFT STYLE="margin-bottom: 0.1cm"><FONT SIZE=1 STYLE="font-size: 8pt">balance
+				connector type: JST-XH </FONT>
+				</P>
+				<P ALIGN=LEFT STYLE="margin-bottom: 0.1cm"><FONT SIZE=1 STYLE="font-size: 8pt">connector
+				type 4.0mm Banana Connector</FONT></P>
+				<P ALIGN=LEFT STYLE="margin-bottom: 0.1cm">&nbsp; <FONT SIZE=1 STYLE="font-size: 8pt">Vol.
+				Gap 11.1V</FONT></P>
+				<P ALIGN=LEFT STYLE="margin-bottom: 0.1cm"><FONT SIZE=1 STYLE="font-size: 8pt">IR&nbsp;
+				(mohm) 15</FONT></P>
+				<P ALIGN=LEFT STYLE="margin-bottom: 0.1cm"><BR><BR>
+				</P>
+				<P ALIGN=LEFT STYLE="margin-bottom: 0.1cm"><FONT SIZE=1 STYLE="font-size: 8pt">#Sparkfun
+				<A HREF="https://www.sparkfun.com/products/341">here</A> and
+				datasheet <A HREF="https://www.sparkfun.com/datasheets/Batteries/063048%20Li-polymer.pdf">here</A>
+				says &lt;-</FONT></P>
+				<P ALIGN=LEFT STYLE="margin-bottom: 0.1cm"><FONT SIZE=1 STYLE="font-size: 8pt">simillar
+				asmentioned in this table.</FONT></P>
+				<P ALIGN=LEFT STYLE="margin-bottom: 0.1cm"><FONT SIZE=1 STYLE="font-size: 8pt">#
+				lipo battery <A HREF="https://www.sparkfun.com/products/339">here</A>
+				and <A HREF="https://www.sparkfun.com/datasheets/Batteries/UnionBattery-1000mAh.pdf">datasheet
+				</A></FONT>
+				</P>
+				<P ALIGN=LEFT STYLE="margin-bottom: 0.1cm"><FONT SIZE=1 STYLE="font-size: 8pt">#
+				lipo Battery <A HREF="https://www.sparkfun.com/products/8483">here</A>
+				and <A HREF="http://www.sparkfun.com/datasheets/Batteries/UnionBattery-2000mAh.pdf">datasheet</A>
+				with <A HREF="http://dlnmh9ip6v2uc.cloudfront.net/datasheets/Prototyping/BatteryProtection.pdf">protection
+				circuit</A></FONT></P>
+				<P ALIGN=LEFT STYLE="margin-bottom: 0.1cm"><BR><BR>
+				</P>
+				<P ALIGN=LEFT><BR>
+				</P>
+			</TD>
+			<TD WIDTH=203 STYLE="border: none; padding: 0cm">
+				<P ALIGN=LEFT STYLE="margin-bottom: 0.1cm"><FONT SIZE=1 STYLE="font-size: 8pt">Another
+				issue is protection circutary. If we want to recharge it then we
+				have to keep it in such case which is fire proff.</FONT></P>
+				<P ALIGN=LEFT><FONT SIZE=1 STYLE="font-size: 8pt">Risk of
+				explosion is higher in using Lipo and Li-ion, if its not take
+				care of.</FONT></P>
+			</TD>
+		</TR>
+	</TABLE>
+</CENTER>
+<P ALIGN=CENTER STYLE="margin-bottom: 0cm; border-top: none; border-bottom: 1.00pt solid #000000; border-left: none; border-right: none; padding-top: 0cm; padding-bottom: 0.07cm; padding-left: 0cm; padding-right: 0cm">
+<BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0cm"><BR>
+</P>
+<CENTER>
+	<TABLE WIDTH=563 CELLPADDING=0 CELLSPACING=0>
+		<COL WIDTH=281>
+		<COL WIDTH=282>
+		<TR>
+			<TH COLSPAN=2 WIDTH=563 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">Lithium Ion
+				battery </FONT>
+				</P>
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">Datasheet
+				<A HREF="http://www.adafruit.com/datasheets/31000_datasheet.pdf">here</A></FONT></P>
+			</TH>
+		</TR>
+		<TR>
+			<TD COLSPAN=2 WIDTH=563 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">Specifications</FONT></P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH=281 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">Type </FONT>
+				</P>
+			</TD>
+			<TD WIDTH=282 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">Lithium ion
+				battery</FONT></P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH=281 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">Nominal
+				capacity</FONT></P>
+			</TD>
+			<TD WIDTH=282 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">4400mAh</FONT></P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH=281 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">Charge
+				Current</FONT></P>
+			</TD>
+			<TD WIDTH=282 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">0.2CA</FONT></P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH=281 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">Nominal
+				Voltage</FONT></P>
+			</TD>
+			<TD WIDTH=282 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">3.7v, avg
+				volt. At 0.2 CA discharge</FONT></P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH=281 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">Charge
+				cutt-of voltage</FONT></P>
+			</TD>
+			<TD WIDTH=282 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">4.2+-0.03v</FONT></P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH=281 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">Discharge
+				current</FONT></P>
+			</TD>
+			<TD WIDTH=282 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">0.2CA</FONT></P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH=281 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">Internal
+				resistance</FONT></P>
+			</TD>
+			<TD WIDTH=282 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">90mOmhs</FONT></P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH=281 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">Discharge
+				cuttof voltage</FONT></P>
+			</TD>
+			<TD WIDTH=282 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">2.75v</FONT></P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH=281 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">Cell voltage</FONT></P>
+			</TD>
+			<TD WIDTH=282 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">3.8~3.9 v</FONT></P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH=281 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">Capacity
+				retention</FONT></P>
+			</TD>
+			<TD WIDTH=282 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER STYLE="margin-bottom: 0cm"><FONT FACE="serif"><FONT SIZE=1 STYLE="font-size: 8pt">After
+				28 days storage at 25±5</FONT></FONT></P>
+				<P STYLE="margin-bottom: 0cm"><FONT FACE="monospace"><FONT SIZE=1 STYLE="font-size: 8pt">°C</FONT></FONT></P>
+				<P STYLE="margin-bottom: 0cm"><FONT FACE="serif"><FONT SIZE=1 STYLE="font-size: 8pt">,
+				after having been </FONT></FONT>
+				</P>
+				<P STYLE="margin-bottom: 0cm"><FONT FACE="serif"><FONT SIZE=1 STYLE="font-size: 8pt">standard
+				charged and discharged at 0.2C</FONT></FONT></P>
+				<P STYLE="margin-bottom: 0cm"><FONT FACE="serif"><FONT SIZE=1 STYLE="font-size: 5pt">5</FONT></FONT></P>
+				<P STYLE="margin-bottom: 0cm"><FONT FACE="serif"><FONT SIZE=1 STYLE="font-size: 8pt">A
+				to 2.75V </FONT></FONT>
+				</P>
+				<P STYLE="margin-bottom: 0cm"><FONT FACE="serif"><FONT SIZE=1 STYLE="font-size: 8pt">(the
+				residual capacity is above 80% of nominal </FONT></FONT>
+				</P>
+				<P STYLE="margin-bottom: 0cm"><FONT FACE="serif"><FONT SIZE=1 STYLE="font-size: 8pt">capacity)
+				</FONT></FONT>
+				</P>
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">and discharge
+				time &gt;= 4h</FONT></P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH=281 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">Inspred from</FONT></P>
+			</TD>
+			<TD WIDTH=282 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><A HREF="http://playground.arduino.cc/Main/IntWithHW-PwrSup"><FONT SIZE=1 STYLE="font-size: 8pt">Here</FONT></A></P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH=281 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">Comments</FONT></P>
+			</TD>
+			<TD WIDTH=282 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">High power
+				density, i.e. lots of Amp hours per gram of battery. Expensive
+				compared to other options. Somewhat dangerous if not operated
+				correctly. Use a charger designed for Li-ion. Will be damaged by
+				over-charging. Will be damaged by over-discharging. </FONT>
+				</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH=281 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">Applied </FONT>
+				</P>
+			</TD>
+			<TD WIDTH=282 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><A HREF="http://www.instructables.com/id/How-to-Install-the-Arduino-to-the-Lithium-Backpack/"><FONT SIZE=1 STYLE="font-size: 8pt">Here</FONT></A></P>
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">and
+				comparision between Lipo and Lithium is <A HREF="http://learn.adafruit.com/li-ion-and-lipoly-batteries/overview">here</A>.</FONT></P>
+				<P ALIGN=CENTER><FONT COLOR="#dc2300"><FONT SIZE=1 STYLE="font-size: 8pt">Important
+				Note! When charging batteries you must make sure that the charger
+				voltage is less than or equal to the battery voltage. For the
+				best battery performance/life you should have them matched. For
+				example: 3.7/4.2V battery and 3.7/4.2V charger: OK - 3.7/4.2V
+				battery and 3.6/4.1V charger: OK (but not ideal) - 3.6/4.1V
+				battery and 3.6/4.1V charger: OK - 3.6/4.1V battery and 3.7/4.2V
+				charger NOT OK! </FONT></FONT>
+				</P>
+				<P ALIGN=CENTER><FONT COLOR="#dc2300"><FONT SIZE=1 STYLE="font-size: 8pt">Go
+				<A HREF="http://www.liquidware.com/shop/show/MBP/Lithium+Backpack">here</A>
+				</FONT></FONT><FONT COLOR="#000000"><FONT SIZE=1 STYLE="font-size: 8pt">his
+				one is for the Arduino Decimilia, Duemilanove and UNO. There’s
+				also a <A HREF="http://www.liquidware.com/shop/show/BPM/">Lithium
+				BackPack</A> that works with the Arduino Mega. </FONT></FONT>
+				</P>
+				<P ALIGN=CENTER><FONT COLOR="#000000"><FONT SIZE=1 STYLE="font-size: 8pt">#
+				this is ready made / regualted power supply running on lithium
+				battery pack and also having USB charger option. Specifications
+				are mentioned in the product page. But its costly.</FONT></FONT></P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH=281 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">Availability</FONT></P>
+			</TD>
+			<TD WIDTH=282 STYLE="border: none; padding: 0cm">
+				<P ALIGN=LEFT STYLE="margin-bottom: 0.1cm"><FONT SIZE=1 STYLE="font-size: 8pt"><A HREF="http://www.flipkart.com/pico-en-el5-rechargeable-li-ion-battery/p/itmdpgxpwbvnrhyh?pid=ACCDPGXMCD68STHM&amp;cmpid=content_rechargeable-battery_8965229628_gmc_pla&amp;tgi=sem,1,G,9226359,g,search,,24309680300,1o6,,,c,,,,,,,&amp;gclid=CJr6-fXugbsCFaUn4godYlsAnA">Here</A>
+				on flipkart.</FONT></P>
+				<P ALIGN=LEFT STYLE="margin-bottom: 0.1cm"><BR><BR>
+				</P>
+				<P ALIGN=LEFT STYLE="margin-bottom: 0.1cm"><FONT SIZE=1 STYLE="font-size: 8pt">Actually
+				these are camera battery and we need a compatible charger to
+				charge it back.</FONT></P>
+				<P ALIGN=LEFT STYLE="margin-bottom: 0.1cm"><BR><BR>
+				</P>
+				<P ALIGN=LEFT STYLE="margin-bottom: 0.1cm"><FONT SIZE=1 STYLE="font-size: 8pt">Li-ion
+				battery comes along with cameras for flashing. So there we can
+				borrow such battery.</FONT></P>
+				<P ALIGN=LEFT STYLE="margin-bottom: 0.1cm"><BR><BR>
+				</P>
+				<P ALIGN=LEFT STYLE="margin-bottom: 0.1cm"><FONT SIZE=1 STYLE="font-size: 8pt">Same
+				pros and cons come with this battery, but this battery got more
+				capacity and it is an advance for of polymer lithium battery.</FONT></P>
+				<P ALIGN=LEFT><BR>
+				</P>
+			</TD>
+		</TR>
+	</TABLE>
+</CENTER>
+<P STYLE="margin-bottom: 0cm; border-top: none; border-bottom: 1.00pt solid #000000; border-left: none; border-right: none; padding-top: 0cm; padding-bottom: 0.07cm; padding-left: 0cm; padding-right: 0cm">
+<BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<CENTER>
+	<TABLE WIDTH=817 CELLPADDING=0 CELLSPACING=0>
+		<COL WIDTH=180>
+		<COL WIDTH=180>
+		<COL WIDTH=458>
+		<TR>
+			<TH COLSPAN=2 WIDTH=359 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">Lead Acid
+				battery</FONT></P>
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">Datasheet
+				<A HREF="http://www.panasonic.com/industrial/includes/pdf/Panasonic_VRLA_LC-RA1212P.pdf">here</A></FONT></P>
+			</TH>
+			<TH WIDTH=458 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><BR>
+				</P>
+			</TH>
+		</TR>
+		<TR>
+			<TD COLSPAN=2 WIDTH=359 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">Specifications</FONT></P>
+			</TD>
+			<TD WIDTH=458 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">Remarks</FONT></P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH=180 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">Type </FONT>
+				</P>
+			</TD>
+			<TD WIDTH=180 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">Lead acid
+				battery / rechargable.</FONT></P>
+			</TD>
+			<TD WIDTH=458 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><BR>
+				</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH=180 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">Nominal
+				capacity</FONT></P>
+			</TD>
+			<TD WIDTH=180 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">20 hour rated
+				-&gt; 12Ah (600 mA)</FONT></P>
+			</TD>
+			<TD WIDTH=458 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><BR>
+				</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH=180 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">1.5 hour rate
+				discharge, cuttof voltage 10.5v</FONT></P>
+			</TD>
+			<TD WIDTH=180 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">5.8 A</FONT></P>
+			</TD>
+			<TD WIDTH=458 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><BR>
+				</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH=180 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">Nominal
+				Voltage</FONT></P>
+			</TD>
+			<TD WIDTH=180 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">3.7v, avg
+				volt. At 0.2 CA discharge</FONT></P>
+			</TD>
+			<TD WIDTH=458 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><BR>
+				</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH=180 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">Internal
+				resistance</FONT></P>
+			</TD>
+			<TD WIDTH=180 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">30mOmhs</FONT></P>
+			</TD>
+			<TD WIDTH=458 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><BR>
+				</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH=180 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">Self
+				discharge</FONT></P>
+			</TD>
+			<TD WIDTH=180 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">Residue
+				capacity after standing 3 months -&gt; 91%</FONT></P>
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">Residue
+				capacity after standing after 6 months -&gt; 82%</FONT></P>
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">Residue
+				capacity after standing after stading 12 months -&gt; 64%</FONT></P>
+			</TD>
+			<TD WIDTH=458 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">Plugging lead
+				acid battery may appears heavy duty battery before arduino but by
+				using voltage regulators it can be bring down to suitable voltage
+				and current to arduino. .i.e. 9V with 500mA.</FONT></P>
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">Those Low
+				Drop Out (LDO) and 7805/ 7809 regulator IC can regulate such
+				power but produces heat so heat sink is must in this case.</FONT></P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH=180 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">Expected
+				trickel life</FONT></P>
+			</TD>
+			<TD WIDTH=180 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">3-5 years at
+				25C, approx 5 years at 20C.</FONT></P>
+			</TD>
+			<TD WIDTH=458 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><BR>
+				</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH=180 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><BR><BR>
+				</P>
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">Charge
+				method( constant voltage) </FONT>
+				</P>
+			</TD>
+			<TD WIDTH=180 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">Inital
+				current -&gt; 4.8 A or smaller</FONT></P>
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">Control
+				voltage14.5 to 14.9 v( per 12v cell )</FONT></P>
+			</TD>
+			<TD WIDTH=458 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><BR>
+				</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH=180 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">For trickel
+				use</FONT></P>
+			</TD>
+			<TD WIDTH=180 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">Inital
+				current -&gt;1.8 A or smaller</FONT></P>
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">Control
+				voltage -&gt; 13.6 to 13.8 v</FONT></P>
+			</TD>
+			<TD WIDTH=458 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><BR>
+				</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH=180 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">Discharge
+				characteristics</FONT></P>
+			</TD>
+			<TD WIDTH=180 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">From
+				datasheet</FONT></P>
+			</TD>
+			<TD WIDTH=458 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><IMG SRC="batterySearch_html_6a592945.jpg" NAME="graphics3" ALIGN=RIGHT WIDTH=324 HEIGHT=216 BORDER=0><BR>
+				</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH=180 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">For more</FONT></P>
+			</TD>
+			<TD WIDTH=180 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">Reffere from
+				<A HREF="http://www.panasonic.com/industrial/includes/pdf/Panasonic_VRLA_LC-RA1212P.pdf">here</A></FONT></P>
+			</TD>
+			<TD WIDTH=458 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><BR>
+				</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH=180 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">Applied</FONT></P>
+			</TD>
+			<TD WIDTH=180 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">One case is
+				from <A HREF="http://www.vetco.net/blog/?p=113">here.</A></FONT></P>
+			</TD>
+			<TD WIDTH=458 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><BR>
+				</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH=180 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">Availability</FONT></P>
+			</TD>
+			<TD WIDTH=180 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">In ebay <A HREF="http://www.ebay.in/sch/sis.html?_kw=APC+RBC2+Replacement+Battery+12V+7+0ah+SLA+1">here</A>.</FONT></P>
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">Costing
+				around 1000rs to 2000 rs.</FONT></P>
+				<P ALIGN=CENTER><BR>
+				</P>
+			</TD>
+			<TD WIDTH=458 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><BR>
+				</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH=180 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">Comments</FONT></P>
+			</TD>
+			<TD WIDTH=180 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">Arduino take
+				7- 12 volts as the on board voltage regulators regulate the
+				current as per MCU requirements.</FONT></P>
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt">If we place
+				Lead acid battery, we can give a long life to arduino along with
+				the sensors so connected but</FONT></P>
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt"># we cannot
+				bypass voltage regulators. So eitehr we have to put our voltage
+				regulator if we go for BBBs, else in Uno , onboard regulators are
+				there for that task. </FONT>
+				</P>
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt"># other way
+				is we have to first regulate the current to 9v by putting heat
+				sink on it and then giving it to arduino to on board regulator.</FONT></P>
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt"># we have to
+				regulate current which is coming from battery.</FONT></P>
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt"># need heat
+				sink on v. Regs.</FONT></P>
+				<P ALIGN=CENTER><FONT SIZE=1 STYLE="font-size: 8pt"># need
+				protection circuit .</FONT></P>
+				<P ALIGN=CENTER><BR>
+				</P>
+			</TD>
+			<TD WIDTH=458 STYLE="border: none; padding: 0cm">
+				<P ALIGN=CENTER><BR>
+				</P>
+			</TD>
+		</TR>
+	</TABLE>
+</CENTER>
+<P STYLE="margin-bottom: 0cm; border-top: none; border-bottom: 1.00pt solid #000000; border-left: none; border-right: none; padding-top: 0cm; padding-bottom: 0.07cm; padding-left: 0cm; padding-right: 0cm">
+<BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"># 
+</P>
+</BODY>
+</HTML>
